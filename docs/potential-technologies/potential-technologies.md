@@ -5,8 +5,8 @@ This page would discuss all potential technologies with their functionalities mi
 ## Draft 1
 
 There would be two processes included:
-1. [Users' activities detection](###Users'-activities-detection-process)
-2. [Event recommendation](###Event-recommendation)
+1. [Users' activities detection](#users-activities-detection-process)
+2. [Event recommendation](#event-recommendation)
 
 ### Users' activities detection process
 
