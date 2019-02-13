@@ -23,3 +23,20 @@ There would be two processes included:
 
 ## Draft 2
 
+According to recent **_comfortable atmosphere_** design,there are sound and light effect, together with dial/button controls, involved in.
+
+### Controls
+
+* Dial. Can be implemented by a potentiometer in serial to the function circuit for analogue signals. Or using a potentiometer in a control signal circuit, sending to Arduino, for digital signals.
+
+* Button. Could be used in the function circuit.
+
+### Light effect
+
+* There should be some gimbal implementations can be used to give rotation to those lights.
+
+* Brightness can be controlled by potentiometer in serial to the circuit.
+
+### Sound effect
+
+* 
