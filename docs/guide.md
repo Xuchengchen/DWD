@@ -1,4 +1,4 @@
-# README
+# Guide
 
 This page discribe how to add contents into the blog.
 
@@ -18,3 +18,9 @@ This page discribe how to add contents into the blog.
     * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * HTML
     * [W3Schools](https://www.w3schools.com/html/)
+
+## Known issues
+
+* Markdown
+    * A link to markdown file need a # tag after the address. e.g. `[index](index.md)` to `[index](index.md#)`. Otherwise, the broswer would tend to download the markdown file instead of routing to the relevant html page.
+    * The markdown file would not be rendered to html page if it is named as README.
