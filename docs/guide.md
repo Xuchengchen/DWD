@@ -22,5 +22,5 @@ This page discribe how to add contents into the blog.
 ## Known issues
 
 * Markdown
-    * A link to markdown file need a # tag after the address. e.g. `index.md` to `index.md#`. Otherwise, the broswer would tend to download the markdown file instead of routing to the relevant html page.
+    * A link to markdown file need a **#** tag after the address. e.g. `index.md` to `index.md#`. Otherwise, the broswer would tend to download the markdown file instead of routing to the relevant html page.
     * The markdown file would not be rendered to html page if it is named as README.
