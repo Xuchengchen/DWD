@@ -1,6 +1,6 @@
 # Blog of DWD
 
-This is the blog for DWD of group with Shiyao, Xucheng, Shujie, Yue, and Xinyu.
+This is the blog for DWD of group with [Shiyao](https://github.com/BillShiyaoZhang "GitHub"), [Xucheng](https://github.com/Xuchengchen "GitHub"), [Shujie](https://github.com/dushujie "GitHub"), [Yue Qiu](https://github.com/Joyyyyyyyy "GitHub"), and [Xinyu](https://github.com/xinyu314 "GitHub").
 
 ## List of Blogs
 
