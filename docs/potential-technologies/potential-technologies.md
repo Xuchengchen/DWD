@@ -4,6 +4,8 @@ This page would discuss all potential technologies with their functionalities mi
 
 ## Draft 1
 
+**Author**: [Shiyao](https://github.com/BillShiyaoZhang)
+
 There would be two processes included:
 1. [Users' activities detection](#users-activities-detection-process)
 2. [Event recommendation](#event-recommendation)
@@ -23,6 +25,8 @@ There would be two processes included:
 
 ## Draft 2
 
+**Author**: [Shiyao](https://github.com/BillShiyaoZhang)
+
 According to recent **_comfortable atmosphere_** design,there are sound and light effect, together with dial/button controls, involved in.
 
 ### Controls
@@ -39,4 +43,4 @@ According to recent **_comfortable atmosphere_** design,there are sound and ligh
 
 ### Sound effect
 
-* 
+No idea...
