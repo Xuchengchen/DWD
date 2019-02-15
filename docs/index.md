@@ -8,6 +8,7 @@ This is the blog for DWD of group with [Shiyao](https://github.com/BillShiyaoZha
 2. [1-2-2019](1-2-2019.md# "Blog on 1st Feb., 2019")
 3. [9-2-2019](9-2-2019.md# "Blog on 9th Feb., 2019")
 4. [12-2-2019](12-2-2019.md# "Blog on 12th Feb., 2019")
+5. [Literature Review](literature-review.md# "Literature Review")
 
 ## Guide
 
