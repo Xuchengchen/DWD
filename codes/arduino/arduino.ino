@@ -33,7 +33,7 @@ void loop() {
   hueDial();
   saturationDial();
   valueDial();
-  
+  musicDial();
 
   for (int i = 0; i <30; i++) {
     leds[i] = CHSV(hOutputValue, sOutputValue, vOutputValue);
@@ -67,4 +67,8 @@ void saturationDial(){
 void valueDial(){
   vSensorValue = analogRead(vAnalogInPin);
   vOutputValue = float(vSensorValue / 1023) * 255;
+}
+
+void musicDial(){
+  musicSensorValue = analogRead(musicAnalogInPin);
 }
