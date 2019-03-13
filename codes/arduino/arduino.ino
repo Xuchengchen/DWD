@@ -1,3 +1,4 @@
+#define FASTLED_INTERRUPT_RETRY_COUNT 1
 #include <FastLED.h>
 
 #define LED_PIN     13
@@ -17,32 +18,41 @@ int vOutputValue = 1;
 
 const int musicAnalogInPin = A3;
 float musicSensorValue = 1;
-int musicOutputValue = 1;  
+
+const int buttonPin = 2;
+int buttonState = 0; 
 
 CRGB leds[NUM_LEDS];
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  pinMode(buttonPin, INPUT);
   FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
 
 }
 
 void loop() {
 
-  hueDial();
-  saturationDial();
-  valueDial();
-  musicDial();
-
-  for (int i = 0; i <30; i++) {
-    leds[i] = CHSV(hOutputValue, sOutputValue, vOutputValue);
-      FastLED.show();
-  }
-
-  //Serial.println(String(hSensorValue) + ","+ String(sSensorValue)+","+String(vSensorValue));
+  button();
   
-  delay(50);  
+  if (buttonState == 0){
+    hueDial();
+    saturationDial();
+    valueDial();
+
+  
+    for (int i = 0; i <30; i++) {
+      leds[i] = CHSV(hOutputValue, sOutputValue, vOutputValue);
+    }
+    FastLED.show();
+
+
+  } else {
+    Serial.println("hurry!!");
+  }
+  delay(50);
+
   // determine if the session end
     // yes: end task, send result to computers
   
@@ -56,19 +66,24 @@ void loop() {
 
 void hueDial(){
   hSensorValue = analogRead(hAnalogInPin);
-  hOutputValue = float(hSensorValue / 1023) * 255;
+  hOutputValue = int(float(hSensorValue / 1023) * 255);
 }
 
 void saturationDial(){
   sSensorValue = analogRead(sAnalogInPin);
-  sOutputValue = float(sSensorValue / 1023) * 255;
+  sOutputValue = int(float(sSensorValue / 1023) * 255);
 }
 
 void valueDial(){
   vSensorValue = analogRead(vAnalogInPin);
-  vOutputValue = float(vSensorValue / 1023) * 255;
+  vOutputValue = int(float(vSensorValue / 1023) * 255);
 }
 
 void musicDial(){
   musicSensorValue = analogRead(musicAnalogInPin);
+  //Serial.println(String(musicSensorValue));
+}
+
+void button(){
+  buttonState = digitalRead(buttonPin);
 }
