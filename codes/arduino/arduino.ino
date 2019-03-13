@@ -16,9 +16,6 @@ const int vAnalogInPin = A2;
 float vSensorValue = 1;
 int vOutputValue = 1;  
 
-const int musicAnalogInPin = A3;
-float musicSensorValue = 1;
-
 const int buttonPin = 2;
 int buttonState = 0; 
 
@@ -34,56 +31,25 @@ void setup() {
 
 void loop() {
 
-  button();
-  
+  buttonState = digitalRead(buttonPin);
+  hSensorValue = analogRead(hAnalogInPin);
+  hOutputValue = int(float(hSensorValue / 1023) * 255);
+  sSensorValue = analogRead(sAnalogInPin);
+  sOutputValue = int(float(sSensorValue / 1023) * 255);
+  vSensorValue = analogRead(vAnalogInPin);
+  vOutputValue = int(float(vSensorValue / 1023) * 255);
   if (buttonState == 0){
-    hueDial();
-    saturationDial();
-    valueDial();
-
-  
     for (int i = 0; i <30; i++) {
       leds[i] = CHSV(hOutputValue, sOutputValue, vOutputValue);
     }
-    FastLED.show();
-
-
+    FastLED.show();    
   } else {
-    Serial.println("hurry!!");
+    Serial.print(hOutputValue);
+    Serial.print(",");
+    Serial.print(sOutputValue);
+    Serial.print(",");
+    Serial.println(vOutputValue);
   }
-  delay(50);
 
-  // determine if the session end
-    // yes: end task, send result to computers
-  
-  // update all dials' information
-
-  // set LEDs HSL by RGB
-
-  // set music on computer
-  
-}
-
-void hueDial(){
-  hSensorValue = analogRead(hAnalogInPin);
-  hOutputValue = int(float(hSensorValue / 1023) * 255);
-}
-
-void saturationDial(){
-  sSensorValue = analogRead(sAnalogInPin);
-  sOutputValue = int(float(sSensorValue / 1023) * 255);
-}
-
-void valueDial(){
-  vSensorValue = analogRead(vAnalogInPin);
-  vOutputValue = int(float(vSensorValue / 1023) * 255);
-}
-
-void musicDial(){
-  musicSensorValue = analogRead(musicAnalogInPin);
-  //Serial.println(String(musicSensorValue));
-}
-
-void button(){
-  buttonState = digitalRead(buttonPin);
+  delay(100);
 }
