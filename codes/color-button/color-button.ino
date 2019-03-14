@@ -39,6 +39,7 @@ void loop() {
   vSensorValue = analogRead(vAnalogInPin);
   vOutputValue = int(float(vSensorValue / 1023) * 255);
   if (buttonState == 0){
+    // if button clicked
     for (int i = 0; i <30; i++) {
       leds[i] = CHSV(hOutputValue, sOutputValue, vOutputValue);
     }
