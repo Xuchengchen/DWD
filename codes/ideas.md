@@ -20,3 +20,7 @@
 1. recieve OK data
     IF true, go to result page and show results
 2. recieve music data from Arduino and update sound track accordingly
+
+### Colors
+
+1. 
